@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { Button } from 'react-native-elements';
+import { StyleSheet, View } from 'react-native';
+import { Text, Button } from 'react-native-elements';
 
 
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>TrucoApp</Text>
-            <Button
-                title="Jugar"
-                type="outline"
-                style={styles.button}
-                onPress={() => navigation.navigate('Juego')}
-            />
+            <Text h1 style={styles.titulo}>TrucoApp</Text>
+
+            <View style={styles.boton}>
+                <Button
+                    title="Jugar"
+                    type="outline"
+                    onPress={() => navigation.navigate('Juego')}
+                />
+            </View>
 
 
         </View>
@@ -25,12 +27,14 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'stretch',
     },
-    button: {
-        marginRight: 10,
-        marginLeft: 10
+    boton: {
+        marginRight: 100,
+        marginLeft: 100
     },
     titulo: {
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'sans-serif-condensed'
+
     },
     
 });
